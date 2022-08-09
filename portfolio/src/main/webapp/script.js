@@ -26,3 +26,14 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+/** Creates a map and adds it to the page. */
+function createMap() {
+    const map = new google.maps.Map(
+        document.getElementById('map'),
+        {center: {lat: 42.45, lng: -76.47}, zoom: 16});
+    const cornellMarker = new google.maps.Marker({
+        position: {lat: 42.45, lng: -76.47},
+        map: map,
+        title: 'Cornell University'
+        });
+  }
